@@ -126,6 +126,5 @@ export default defineUserConfig({
   ],
 
   bundler: webpackBundler(),
-  pase: "./",
-  base: "/vuepress-starter/",
+  base: "./",
 });
