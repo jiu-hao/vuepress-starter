@@ -5,7 +5,6 @@ import { webpackBundler } from "@vuepress/bundler-webpack";
 
 export default defineUserConfig({
   lang: "en-US",
-  base: "/vuepress-starter/",
   title: "Blog",
   description: "My Blog",
 
@@ -124,6 +123,7 @@ export default defineUserConfig({
       hotReload: true,
     }),
   ],
+  base: "/vuepress-starter/",
 
   bundler: webpackBundler(),
 });
