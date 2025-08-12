@@ -5,9 +5,9 @@ import { webpackBundler } from "@vuepress/bundler-webpack";
 
 export default defineUserConfig({
   lang: "en-US",
-
-  title: "VuePress",
-  description: "My first VuePress Site",
+  base: "/vuepress-starter/",
+  title: "Blog",
+  description: "My Blog",
 
   theme: defaultTheme({
     logo: "/assets/img/logo.png",
@@ -126,5 +126,4 @@ export default defineUserConfig({
   ],
 
   bundler: webpackBundler(),
-  base: "/vuepress-starter/",
 });
