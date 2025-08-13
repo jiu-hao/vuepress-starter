@@ -28,7 +28,7 @@ const routePath = useRoutePath();
 </template>
 
 <style lang="scss">
-@use "@vuepress/theme-default/styles/mixins";
+// @use "@vuepress/theme-default/styles/mixins";
 
 // .category-wrapper {
 //   @include mixins.content-wrapper;

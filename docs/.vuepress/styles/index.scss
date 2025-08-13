@@ -1,0 +1,67 @@
+// 主页背景样式
+.vp-home {
+  // 使用CSS变量定义的渐变背景
+  background: var(--home-bg-gradient);
+  min-height: 100vh;
+
+  // 或者使用纯色背景
+  // background-color: var(--home-bg-color);
+
+  // 或者使用图片背景（需要先添加背景图片到public/assets/img/目录）
+  // background-image: url('/assets/img/background.jpg');
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+}
+
+// 调整主页内容样式
+.home .hero {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.home .features {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  padding: 2rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+// 调整文字颜色以适应深色背景
+.home .hero h1,
+.home .hero p {
+  color: white;
+}
+
+.home .features h2,
+.home .features p {
+  color: white;
+}
+
+// 按钮样式调整
+.home .actions .action-button {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.home .actions .action-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+// 响应式设计
+@media (max-width: 768px) {
+  .home .hero,
+  .home .features {
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+}

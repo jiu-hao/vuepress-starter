@@ -1,0 +1,21 @@
+// VuePress 调色板样式文件
+// 这个文件会被自动加载，用于定义CSS变量
+
+// 定义主题颜色变量
+:root {
+  --c-brand: #3eaf7c;
+  --c-brand-light: #4abf8a;
+  --c-brand-dark: #309a6b;
+
+  // 自定义背景颜色
+  --home-bg-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --home-bg-color: #f5f5f5;
+
+  // 自定义文字颜色
+  --text-color: #2c3e50;
+  --text-color-light: #6a8bad;
+
+  // 自定义边框颜色
+  --border-color: #eaecef;
+  --border-color-dark: #dfe2e5;
+}

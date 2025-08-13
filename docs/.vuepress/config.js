@@ -2,15 +2,26 @@ import { blogPlugin } from "@vuepress/plugin-blog";
 import { defaultTheme } from "@vuepress/theme-default";
 import { defineUserConfig } from "vuepress";
 import { webpackBundler } from "@vuepress/bundler-webpack";
-
+// import { blog, hopeTheme } from "vuepress-theme-hope";
 export default defineUserConfig({
   lang: "en-US",
-  title: "Blog",
-  description: "My Blog",
+  title: "",
+  description: "blog",
+  base: "/vuepress-starter/",
+  bundler: webpackBundler(),
 
+  // 引入全局样式文件
+  alias: {
+    "@": "/docs/.vuepress",
+  },
+
+  // 直接引入样式文件
+  head: [
+    ["link", { rel: "icon", href: "./assets/favicon.ico" }],
+    ["link", { rel: "stylesheet", href: "./styles/index.scss" }],
+  ],
   theme: defaultTheme({
     logo: "/assets/img/logo.png",
-
     navbar: [
       "/",
       {
@@ -29,7 +40,28 @@ export default defineUserConfig({
         text: "Timeline",
         link: "/timeline/",
       },
+      {
+        text: "github",
+        link: "https://github.com/jiu-hao/vuepress-starter/settings/pages",
+      },
     ],
+    sidebar: [
+      {
+        text: "指南",
+        link: "/zh/guide/README.md",
+        icon: "lightbulb",
+      },
+      { text: "配置", link: "/zh/config/README.md", icon: "config" },
+      {
+        text: "常见问题",
+        link: "/zh/faq.md",
+        icon: "circle-question",
+        // 会在 `/zh/faq` 开头的路径激活
+        // 所以当你前往 `/zh/faq/xxx.html` 时也会激活
+        activeMatch: "^/zh/faq",
+      },
+    ],
+    theme: "vuepress-theme-hope",
   }),
 
   plugins: [
@@ -123,7 +155,4 @@ export default defineUserConfig({
       hotReload: true,
     }),
   ],
-  base: "/vuepress-starter/",
-
-  bundler: webpackBundler(),
 });

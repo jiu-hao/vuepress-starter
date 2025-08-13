@@ -27,7 +27,7 @@ const routePath = useRoutePath();
 </script>
 
 <style lang="scss">
-@use "@vuepress/theme-default/styles/mixins";
+// @use "@vuepress/theme-default/styles/mixins";
 
 // .tag-wrapper {
 //   @include mixins.content-wrapper;

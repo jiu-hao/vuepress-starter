@@ -1,1 +1,14 @@
-export const themeData = JSON.parse("{\"logo\":\"/assets/img/logo.png\",\"navbar\":[\"/\",{\"text\":\"Article\",\"link\":\"/article/\"},{\"text\":\"Category\",\"link\":\"/category/\"},{\"text\":\"Tag\",\"link\":\"/tag/\"},{\"text\":\"Timeline\",\"link\":\"/timeline/\"}],\"locales\":{\"/\":{\"selectLanguageName\":\"English\"}},\"colorMode\":\"auto\",\"colorModeSwitch\":true,\"repo\":null,\"selectLanguageText\":\"Languages\",\"selectLanguageAriaLabel\":\"Select language\",\"sidebar\":\"heading\",\"sidebarDepth\":2,\"editLink\":true,\"editLinkText\":\"Edit this page\",\"lastUpdated\":true,\"contributors\":true,\"contributorsText\":\"Contributors\",\"notFound\":[\"There's nothing here.\",\"How did we get here?\",\"That's a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"backToHome\":\"Take me home\",\"openInNewWindow\":\"open in new window\",\"toggleColorMode\":\"toggle color mode\",\"toggleSidebar\":\"toggle sidebar\"}")
+export const themeData = JSON.parse("{\"logo\":\"/assets/img/logo.png\",\"navbar\":[\"/\",{\"text\":\"Article\",\"link\":\"/article/\"},{\"text\":\"Category\",\"link\":\"/category/\"},{\"text\":\"Tag\",\"link\":\"/tag/\"},{\"text\":\"Timeline\",\"link\":\"/timeline/\"},{\"text\":\"github\",\"link\":\"https://github.com/jiu-hao/vuepress-starter/settings/pages\"}],\"sidebar\":[{\"text\":\"指南\",\"link\":\"/zh/guide/README.md\",\"icon\":\"lightbulb\"},{\"text\":\"配置\",\"link\":\"/zh/config/README.md\",\"icon\":\"config\"},{\"text\":\"常见问题\",\"link\":\"/zh/faq.md\",\"icon\":\"circle-question\",\"activeMatch\":\"^/zh/faq\"}],\"theme\":\"vuepress-theme-hope\",\"locales\":{\"/\":{\"selectLanguageName\":\"English\"}},\"colorMode\":\"auto\",\"colorModeSwitch\":true,\"repo\":null,\"selectLanguageText\":\"Languages\",\"selectLanguageAriaLabel\":\"Select language\",\"sidebarDepth\":2,\"editLink\":true,\"editLinkText\":\"Edit this page\",\"lastUpdated\":true,\"contributors\":true,\"contributorsText\":\"Contributors\",\"notFound\":[\"There's nothing here.\",\"How did we get here?\",\"That's a Four-Oh-Four.\",\"Looks like we've got some broken links.\"],\"backToHome\":\"Take me home\",\"openInNewWindow\":\"open in new window\",\"toggleColorMode\":\"toggle color mode\",\"toggleSidebar\":\"toggle sidebar\"}")
+
+if (import.meta.webpackHot) {
+  import.meta.webpackHot.accept()
+  if (__VUE_HMR_RUNTIME__.updateThemeData) {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  }
+}
+
+if (import.meta.hot) {
+  import.meta.hot.accept(({ themeData }) => {
+    __VUE_HMR_RUNTIME__.updateThemeData(themeData)
+  })
+}

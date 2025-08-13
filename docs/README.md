@@ -1,8 +1,9 @@
 ---
 home: true
 title: Home
-icon: favicon.ico
-heroImage: ./public/assets/logo.png
+lang: zh-CN
+heroImage: /assets/img/logo.png
+# layout: CustomLayout
 actions:
   - text: Get Started
     link: /get-started.html
